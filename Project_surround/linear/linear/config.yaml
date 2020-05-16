@@ -1,0 +1,11 @@
+output:
+  text: Hello World
+
+image: linear
+company: yourcompany
+version: latest
+
+assembler:
+  default: baseline
+
+

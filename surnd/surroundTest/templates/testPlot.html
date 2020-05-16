@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+	Projection by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html xmlns="http://www.w3.org/1999/html">
+	<head>
+		<title>Surround AI</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+                    <a href="{% url 'index' %}" class="logo"><strong style="font-size: 30px;">Surround AI</strong></a>
+					<nav id="nav">
+						<a href="{% url 'index' %}">Home</a>
+						<a href="{% url 'aiconcepts' %}">AI Concepts</a>
+						<a href="{% url 'example' %}">AI Examples</a>
+						<a href="{% url 'testPlot' %}">Test Plot</a>
+
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Three -->
+
+			<section id="three" class="wrapper">
+				<div class="inner">
+					<header class="align-center">
+						<h2>Test</h2>
+
+					</header>
+					<h1>What the machine will learn</h1>
+					<p>1: Straight line passing through (0,0) with an angle of 45 degree between x and y axes
+						<br>2: Circle with radius of 5 centered at (0,0)</br>
+          				3: A square of width 8 and centered at (0,0)</p>
+
+					<form method="POST">{% csrf_token %}
+					Enter the command: {{ myform }}
+					<input type="submit" name="submit_cmd" value="Run" />
+					</form>
+					{% if output %}<h3>{{ output }}</h3>{% endif %}
+					{% if exit_code %}<h3>Your command returned an error: {{ error_msg }}</h3>{% endif %}
+
+
+                </div>
+			</section>
+
+
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/skel.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>

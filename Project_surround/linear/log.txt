@@ -1,0 +1,5 @@
+2020-04-29 01-30-16-949546:INFO:surround.assembler:Starting 'baseline'
+2020-04-29 01-30-16-961066:INFO:surround.assembler:Validator InputValidator took 0:00:00.000019 secs
+2020-04-29 01-30-16-972801:INFO:linear.stages.baseline:Output: CKECK
+2020-04-29 01-30-16-984275:INFO:surround.assembler:Estimator Baseline took 0:00:00.011396 secs
+2020-04-29 01-30-17-001898:INFO:surround.assembler:Visualiser ReportGenerator took 0:00:00.004907 secs

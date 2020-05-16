@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<!--
+	Projection by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>SURROUND AI</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+                    <a href="index.html" class="logo"><img style="height:80%;width: 80%;"src="images/combined-logo-white.svg"></a>
+					<nav id="nav">
+						<a href="index.html">Home</a>
+						<a href="aiconcepts.html">AI Concepts</a>
+						<a href="{% url "example" %}">AI Examples</a>
+
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<header>
+						<h1>WELCOME TO SURROUND AI</h1>
+					</header>
+
+					<div class="flex ">
+
+						<div>
+							<span class="icon fa-github"></span>
+							<h3>Open Source</h3>
+							<p>Framework to learn ML solutions </p>
+						</div>
+
+						<div>
+							<span class="icon fa-cloud-download"></span>
+							<h3>One Stop Solution</h3>
+							<p>For building a ML project</p>
+						</div>
+
+						<div>
+							<span class="icon fa-desktop"></span>
+							<h3>Command Line tool</h3>
+							<p>project generation and running the project</p>
+						</div>
+
+					</div>
+
+					<footer>
+						<a href="#three" class="button">Get Started</a>
+					</footer>
+				</div>
+			</section>
+
+
+		<!-- Three -->
+			<section id="three" class="wrapper">
+				<div class="inner">
+					<header class="align-center">
+						<h2>What is Surround AI?</h2>
+
+					</header>
+					<div class="image round left">
+						<img src="images/images.jfif" alt="Pic 01" />
+					</div>
+					<p>Surround is an open-source framework developed by the Applied Artificial Intelligence Institute (A2I2) to take machine learning solutions through from exploration all the way to production. For this reason, it is developed with both research engineers and software developers in mind. Designed to play nice with existing machine learning frameworks (Tensorflow, MXNet, PyTorch, etc) and cloud services (Google Cloud AI, SageMaker, Rekognition etc), engineers have the freedom to use whatever necessary to solve their problem.Surround isn’t just a framework, its also a philosophy. From the moment data lands on our desk we need to be thinking about the final use case for the solutions we are developing. To reduce the amount of time between data exploration and a containerised proof-of-concept web application ready to be deployed, Surround was built to resolve some competing requirements of both researchers and engineers. Where in general researchers want to dive into the data and leave code quality to later, and engineers prefer well structured code from the start. We attempt to solve this problem with Surround by introducing a “production first” mindset and providing conventions for researchers (a separate folder for data exploration scripts).Long ago, web frameworks realised there are a set of concerns that almost all web applications must deal with, such as connecting to databases, managing configuration, rendering static and dynamic content, and handling security concerns. Machine Learning projets have similar concerns but also have their own set of special concerns such as:</p>
+                    <div class="6u 12u$(small)">
+											<ul class="alt">
+												<li>Experimentation is a first class citizen.</li>
+												<li>Data and models need to be versioned and managed.</li>
+												<li>Model performance needs to be visualized.</li><li>Training infrastructure is required.</li>
+											</ul>
+
+										</div>
+						<p>Surround strives to provide a single place for every concern that arises when building a ML project. Ideally there will be a single solution to any concerns that occur to either the research engineer or the software developer. But to be the single place for ML projects we are going to have to support as many existing frameworks, libraries and APIs as we can. This can be seen reflected in the design of Surround where the Core framework could be used to build:</p>
+
+                         <div class="6u 12u$(small)">
+											<ul>
+												<li>A solution based on cloud APIs.</li>
+												<li>A custom Docker image for SageMaker.</li>
+												<li>Form part of a batch process running on an internal Kubernetes cluster.</li>
+											</ul>
+
+										</div>
+                    <header class="align-center">
+					    <h2>Surround AI Architecture</h2>
+					</header>
+
+					<span class="image right"><img src="images/pipeline_flow_diagram.png" alt="" /></span>
+                    <h2>The Assembler</h2>
+                    <p>The Assembler is responsible for constructing and executing a pipeline on data. How the pipeline is constructed (and where/how data is loaded) depends on which execution mode is being used. The above diagram describes a simple Surround pipeline showing three different modes of execution. These modes are described below.</p>
+                    <h2>Training</h2>
+                    <p>Primarily built for training, training data is loaded from disk (usually in bulk) then fed through the pipeline with the estimator set to fit mode. Once training the pipeline is complete the data is then fed to a visualiser which will help display useful information about the training operation.</p>
+                    <h2>Batch-Predict</h2>
+                    <p>Primarily built for evaluation, data is loaded from disk (also usually in bulk) then fed through the pipeline with the estimator set to estimate mode. Once processing is complete the data is then fed to a visualiser which will help summarise and visualise the overall results / performance.</p>
+                    <h2>Web-Predict</h2>
+                    <p>This mode is built for production. When your pipeline is setup, training has been completed, evaluation of the model shows good performance and is ready for use, this mode is to be used to serve your pipeline. Depending on the type of project you generated initially, the input data may come from your local disk or from the body of a POST HTTP request and the result may be saved locally or returned to the client who sent the request.</p>
+
+				</div>
+			</section>
+
+		<!-- Footer -->
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+    var divHeight = $('.header').height();
+    $('.inner').css('margin-top', divHeight+'px');
+    $('.header').css('color':'black','background':'white');   }); </script>
+
+	</body>
+</html>
